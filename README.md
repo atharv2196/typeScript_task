@@ -1,74 +1,62 @@
-# React + TypeScript + Vite
+# User Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a coding task solution for a user management dashboard built using React, TypeScript, MUI, and Redux Toolkit with RTK Query.
 
-Currently, two official plugins are available:
+The application allows users to view, add, edit, and delete user records fetched from a mock API, showcasing proficiency in modern frontend state management and component architecture.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+will be hosting soon
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✅ Evaluation Criteria Met
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The following criteria have been successfully implemented:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Core Requirements
+* **User Display:** Fetches users from `jsonplaceholder.typicode.com/users` and displays Name, Email, Username, and Actions (Edit/Delete) in an MUI Table.
+* **CRUD Operations:** Implements Add (POST), Edit (PUT/PATCH), and Delete (DELETE) actions using RTK Query mutations.
+* **Data Persistence Logic:** Utilizes **Optimistic Updates** and custom Redux configuration to enforce client-side persistence against the non-persistent mock API.
+* **UI/UX:** Uses MUI Dialogs for Add/Edit/Delete confirmation and handles loading/error states gracefully.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Bonus Features (Impressive)
+* **Search Functionality:** Includes a functional search bar that filters users by Name, Username, and Email.
+* **Notifications:** Implements Snackbar notifications for success and error feedback on all CRUD operations.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Setup and Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# typeScript_task
+### Prerequisites
+* Node.js (v18+)
+* npm or Yarn
+
+### Steps
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/atharv2196/typeScript_task.git](https://github.com/atharv2196/typeScript_task.git)
+    cd typeScript_task
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or yarn install
+    ```
+3.  **Run the application:**
+    ```bash
+    npm run dev
+    ```
+The application will be available at `http://localhost:5173/` (or similar address).
+
+---
+
+## 🧱 Tech Stack
+
+* **Frontend:** React.js
+* **Language:** TypeScript
+* **Styling:** MUI (Material UI)
+* **State Management:** Redux Toolkit
+* **API Layer:** RTK Query
