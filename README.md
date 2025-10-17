@@ -7,8 +7,8 @@ The application allows users to view, add, edit, and delete user records fetched
 ---
 
 ## 🚀 Live Demo
+https://tstaskshahrukh.netlify.app/
 
-will be hosting soon
 
 ---
 
